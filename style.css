@@ -1,0 +1,27 @@
+/* Header on landing page */
+body {
+    margin: 0;
+
+}
+
+h1, h3 {
+    text-align: center;
+    background-color: purple;
+    color: white;
+}
+
+header {
+    /* background-color: purple; */
+}
+
+button {
+    background-color: lightpink;
+    border: none;
+    margin: 5px;
+    padding: 10px;
+}
+
+button:hover {
+    background-color: rgb(173, 112, 122);
+    cursor: pointer;
+}
