@@ -3,30 +3,36 @@
 const startButton = document.querySelector('#start')
 var questions = [
     {
-        prompt: 'What is the answer to the first question?',
-        choices: ['this is the right answer', 'or this is the right answer', 'maybe this is it'],
-        correct: 'or this is the right answer'
+        prompt: 'Which one of these is a string?',
+        choices: ["(this is the right answer)", '"or this is the right answer"', '-maybe this is it-'],
+        correct: '"or this is the right answer"'
     },
     {
-        prompt: 'What is the answer to the second question?',
-        choices: ['this is the right answer', 'or this is the right answer', 'maybe this is it'],
-        correct: 'maybe this is it'
+        prompt: 'Which is NOT a JavsScript data type?',
+        choices: ['Boolean', 'Undefined', 'Variable', 'Object'],
+        correct: 'Variable'
     },
     {
-        prompt: 'What is the answer to the third question?',
-        choices: ['this is the right answer', 'or this is the right answer', 'maybe this is it'],
-        correct: 'maybe this is it'
+        prompt: 'What is === operator?',
+        choices: ['== is called a strict equality operator', '== is called an equality operator', '=== is called a strict equality operator', '= is called an equality operator'],
+        correct: '=== is called a strict equality operator'
     },
     {
-        prompt: 'What is the answer to the fourth question?',
-        choices: ['this is the right answer', 'or this is the right answer', 'maybe this is it'],
-        correct: 'maybe this is it'
+        prompt: 'How can you convert a string into a number?',
+        choices: ['parseInd()', 'ParseInt()', 'parceInt()', 'parseInt()'],
+        correct: 'parseInt()'
+    }, 
+    {
+        prompt: 'What is an undefined value in JavaScript?',
+        choices: ['A value that does not exist', 'A variable that is assigned to another variable', 'A variable that has not been assigned a value', 'A value that has not been assigned a variable'],
+        correct: 'A variable that has not been assigned a value'
     }
 ]
 
 console.log(questions[0].choices[1])
 //let the element know we are selecting it
 const quizContainer = document.querySelector('#quiz-container')
+const quizOver = document.querySelector('#quiz-over')
 let timeEl = document.getElementById('time-element')
 let questionIndex = 0
 let score = 0
@@ -67,12 +73,12 @@ function renderQuestions() {
 function checkAnswer(e) {
     if (e.target.tagName === 'BUTTON') {
 
-        if (e.target.textContent === questions[0].correct) {
+        if (e.target.textContent === questions[questionIndex].correct) {
             console.log('correct')
             score += 25
         } else {
             console.log('incorrect')
-            currentTime -= 10
+            currentTime -= 25
         }
         questionIndex++
         renderQuestions()
@@ -88,11 +94,20 @@ function startTimer() {
         }
         timeEl.textContent = currentTime
         currentTime--
-    }, 1000)
+    }, 5000)
 }
 
 function endQuiz() {
-    console.log('quiz is over your score is ', score)
+    // quizOver.textContent = `Thank you for playing, your score is ${score}`
+
+    if(score<=10){
+        quizOver.textContent = `Yikes! Your score is ${score}. I'm sure you can do better than that!`
+        document.querySelector('.end-game-screen').setAttribute('style', 'background-color: red;')
+    } else if(score >10 && score <=60){
+        quizOver.textContent = `Not bad! Your score is ${score}. But I think you can do better!`
+    } else{
+        quizOver.textContent = `Awesome! your score is ${score}. Teach me your ways, oh JavaScript legend!`
+    }
 }
 
 startButton.addEventListener('click', startQuiz)

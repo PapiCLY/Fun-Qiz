@@ -1,27 +1,87 @@
 /* Header on landing page */
 body {
     margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(10, 10, 10);
 
 }
 
-h1, h3 {
+h1 {
     text-align: center;
-    background-color: purple;
+    /* background-color: purple; */
     color: white;
 }
 
-header {
-    /* background-color: purple; */
+/* Start button */
+#start{
+    background-color: greenyellow;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 50px;
+    margin: auto;
 }
 
-button {
-    background-color: lightpink;
-    border: none;
-    margin: 5px;
+#start:hover{
+    background-size: 100%;
+    background-image: linear-gradient(45deg,#ff712f, #adff2f, #1c0ee6);
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+}
+
+.btn-div{
+    display: flex;
+    margin-top: 150px;
+}
+
+/* Heading Screen Span */
+.fun {
+    background-size: 100%;
+    background-image: linear-gradient(45deg,#ff712f, #adff2f, #1c0ee6);
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    /* color: #adff2f; */
+    font-size: 80px;
+}
+
+#quiz-container{
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    margin-top: 150px;
+}
+
+button{
+    width: 20%;
+    margin-bottom: 20px;
+    background-color: greenyellow;
     padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 20px;
 }
 
 button:hover {
-    background-color: rgb(173, 112, 122);
+    background-size: 100%;
+    background-image: linear-gradient(45deg,#ff712f, #adff2f, #1c0ee6);
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
     cursor: pointer;
+}
+
+h3 {
+    color: white;
+    font-size: 50px;
 }
