@@ -31,3 +31,4 @@ Deployed application.
 
 ## Github Pages
 
+https://papicly.github.io/Fun-Qiz/
