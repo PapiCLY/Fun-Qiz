@@ -78,7 +78,7 @@ function checkAnswer(e) {
             score += 25
         } else {
             console.log('incorrect')
-            currentTime -= 25
+            currentTime -= 15
         }
         questionIndex++
         renderQuestions()
@@ -94,7 +94,7 @@ function startTimer() {
         }
         timeEl.textContent = currentTime
         currentTime--
-    }, 5000)
+    }, 1000)
 }
 
 function endQuiz() {
@@ -102,7 +102,6 @@ function endQuiz() {
 
     if(score<=10){
         quizOver.textContent = `Yikes! Your score is ${score}. I'm sure you can do better than that!`
-        document.querySelector('.end-game-screen').setAttribute('style', 'background-color: red;')
     } else if(score >10 && score <=60){
         quizOver.textContent = `Not bad! Your score is ${score}. But I think you can do better!`
     } else{

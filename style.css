@@ -85,3 +85,23 @@ h3 {
     color: white;
     font-size: 50px;
 }
+
+#time-element{
+    display: flex;
+    color: white;
+    margin: auto;
+    text-align: center;
+    width: 5%;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+#quiz-over{
+    display: flex;
+    color: white;
+    margin: auto;
+    text-align: center;
+    width: 50%;
+    font-size: 50px;
+    font-weight: bold;
+}
