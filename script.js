@@ -41,7 +41,7 @@ const quizOver = document.querySelector('#quiz-over')
 let timeEl = document.getElementById('time-element')
 let questionIndex = 0
 let score = 0
-let currentTime = 200
+let currentTime = 60
 
 //Hide welcome screen elements, and display first question and choices
 
