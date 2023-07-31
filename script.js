@@ -84,6 +84,7 @@ function checkAnswer(e) {
         } else {
             console.log('incorrect')
             currentTime -= 15
+            console.log(score -=3);
         }
         questionIndex++
         renderQuestions()
