@@ -12,6 +12,11 @@ h1 {
     color: white;
 }
 
+h3 {
+    width: 50%;
+    text-align: center;
+}
+
 /* Start button */
 #start{
     background-color: greenyellow;
@@ -56,7 +61,7 @@ h1 {
     flex-direction: column;
     margin: auto;
     align-items: center;
-    margin-top: 150px;
+    margin-top: 20px;
 }
 
 button{
@@ -110,8 +115,11 @@ h3 {
 .rules{
     font-size: 20px;
     color: #adff2f;
+    margin-bottom: 30px;
 }
 
 .good-luck{
     color: white;
+    margin-top: 40px;
 }
+
