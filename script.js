@@ -28,7 +28,7 @@ var questions = [
         correct: 'A variable that has not been assigned a value'
     },
     {
-        prompt: 'Which company developed JaveScript?',
+        prompt: 'Which company developed JavaScript?',
         choices: ['Mozilla', 'Java', 'EcmaScript', 'NetScape'],
         correct: 'NetScape'
     }
