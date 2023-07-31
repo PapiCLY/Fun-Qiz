@@ -1,7 +1,6 @@
 ## User Story
 
 ```
-AS A coding boot camp student
 User will take a timed quiz on JavaScript fundamentals that stores high scores
 User will be able to gauge their progress compared to their peers
 ```
