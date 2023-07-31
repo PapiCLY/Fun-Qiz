@@ -14,7 +14,7 @@ var questions = [
     },
     {
         prompt: 'What is === operator?',
-        choices: ['== is called a strict equality operator', '== is called an equality operator', '=== is called a strict equality operator', '= is called an equality operator'],
+        choices: ['=== is called a strict quality operator', '=== is called an equality operator', '=== is called a strict equality operator', '=== is called an equality operator'],
         correct: '=== is called a strict equality operator'
     },
     {
