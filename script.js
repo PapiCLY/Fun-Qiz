@@ -108,7 +108,7 @@ function endQuiz() {
 
     if(score<=25){
         quizOver.textContent = `Yikes! Your score is ${score}. I'm sure you can do better than that!`
-    } else if(score >25 && score <=60){
+    } else if(score >25 && score <=75){
         quizOver.textContent = `Not bad! Your score is ${score}. But I think you can do better!`
     } else{
         quizOver.textContent = `Awesome! your score is ${score}. Teach me your ways, oh JavaScript legend!`
