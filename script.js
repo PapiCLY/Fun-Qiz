@@ -26,6 +26,11 @@ var questions = [
         prompt: 'What is an undefined value in JavaScript?',
         choices: ['A value that does not exist', 'A variable that is assigned to another variable', 'A variable that has not been assigned a value', 'A value that has not been assigned a variable'],
         correct: 'A variable that has not been assigned a value'
+    },
+    {
+        prompt: 'Which company developed JaveScript?',
+        choices: ['Mozilla', 'Java', 'EcmaScript', 'NetScape'],
+        correct: 'NetScape'
     }
 ]
 
@@ -88,9 +93,10 @@ function checkAnswer(e) {
 
 function startTimer() {
     let timeInterval = setInterval(function (){
-        if (currentTime === 0 || questionIndex >= questions.length) {
+        if (currentTime === 0 || questionIndex >= questions.length || currentTime < 0) {
             clearInterval(timeInterval)
             endQuiz()
+            document.querySelector('#quiz-container').setAttribute('style', 'display: none;')
         }
         timeEl.textContent = currentTime
         currentTime--
@@ -100,13 +106,14 @@ function startTimer() {
 function endQuiz() {
     // quizOver.textContent = `Thank you for playing, your score is ${score}`
 
-    if(score<=10){
+    if(score<=25){
         quizOver.textContent = `Yikes! Your score is ${score}. I'm sure you can do better than that!`
-    } else if(score >10 && score <=60){
+    } else if(score >25 && score <=60){
         quizOver.textContent = `Not bad! Your score is ${score}. But I think you can do better!`
     } else{
         quizOver.textContent = `Awesome! your score is ${score}. Teach me your ways, oh JavaScript legend!`
     }
+    document.querySelector('#quiz-container').setAttribute('style', 'display: none;')
 }
 
 startButton.addEventListener('click', startQuiz)
