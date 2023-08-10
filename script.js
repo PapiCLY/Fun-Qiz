@@ -34,14 +34,14 @@ var questions = [
     }
 ]
 
-console.log(questions[0].choices[1])
+// console.log(questions[0].choices[1])
 //let the element know we are selecting it
 const quizContainer = document.querySelector('#quiz-container')
 const quizOver = document.querySelector('#quiz-over')
 let timeEl = document.getElementById('time-element')
 let questionIndex = 0
 let score = 0
-let currentTime = 60
+let currentTime = 600
 
 //Hide welcome screen elements, and display first question and choices
 
@@ -97,7 +97,7 @@ function startTimer() {
         if (currentTime === 0 || questionIndex >= questions.length || currentTime < 0) {
             clearInterval(timeInterval)
             endQuiz()
-            document.querySelector('#quiz-container').setAttribute('style', 'display: none;')
+            // document.querySelector('#quiz-container').setAttribute('style', 'display: none;')
         }
         timeEl.textContent = currentTime
         currentTime--
