@@ -1,4 +1,4 @@
-//Build start screen elemts in HTML
+//Build start screen elements in HTML
 
 const startButton = document.querySelector('#start')
 var questions = [
